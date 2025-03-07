@@ -69,9 +69,22 @@ Validate the change
 
 Crossplane supports installing Providers during an initial Crossplane installation with the Crossplane Helm chart.
 
+First, crossplane needs a `ProviderConfig`, let's create the `k8s-addons/crossplane-system/base/config-in-cluster.yaml` :
+
+```yaml
+# Check ./provider-in-cluster.yaml to see how to grant permissions to the Provider
+apiVersion: kubernetes.crossplane.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: kubernetes-provider
+spec:
+  credentials:
+    source: InjectedIdentity
+```
+
 Let's add the kubernetes provider to crossplane
 
-The file `k8s-addons/crossplane-system/base/provider-in-cluster.yamlprovider-in-cluster.yaml` has the `Provider`, `DeploymentRuntimeConfig` and `ClusterRoleBinding` definitions:
+The file `k8s-addons/crossplane-system/base/provider-in-cluster.yaml` has the `Provider`, `DeploymentRuntimeConfig` and `ClusterRoleBinding` definitions:
 
 ```yaml
 ---
