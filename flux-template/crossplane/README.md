@@ -13,7 +13,7 @@ e.g. you want to enable feature flags like `- --enable-realtime-compositions` op
 Add the flag:
 
 ```bash
-flux-minikube git:(main) vim k8s-addons/crossplane-system/base/helm-release.yaml
+vim k8s-addons/crossplane-system/base/helm-release.yaml
 ```
 
 
