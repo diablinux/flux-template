@@ -1,0 +1,15 @@
+appName: appName
+repoUrl: URL
+chartVersion: "x.y.z"
+namespace: namespace
+# customValues is a map of values that will be passed to the Helm chart.
+# customValues:
+  # args:
+  #   - "--debug"
+  # resources:
+  #   requests:
+  #     cpu: "100m"
+  #     memory: "128Mi"
+  #   limits:
+  #     cpu: "200m"
+  #     memory: "256Mi"

@@ -1,0 +1,6 @@
+appName: ""
+repoUrl: ""
+chartVersion: ""
+namespace: ""
+interval: "1h"
+customValues: {}

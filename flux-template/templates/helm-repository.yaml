@@ -1,0 +1,10 @@
+---
+# This is a HelmRepository CRD that Flux will use to deploy crossplane
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: {{ .Values.appName }}
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: {{ .Values.repoUrl }}
